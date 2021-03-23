@@ -1,9 +1,9 @@
 name: visualstudio
-os: Debian, Ubuntu, Raspbian, RedHat, Fedora, CentOS, Suse, openSUSE, Gentoo, Funtoo, Arch, Manjaro, Darwin
-os_family: Debian, RedHat, Suse, Arch, Alpine, MacOS
+os: Windows
+os_family: Windows
 version: 0.4.0
 release: 1
 minimum_version: 2016.11
 summary: visualstudio formula
-description: Formula to install visualstudio and configure it.
+description: Formula to run visualstudio installer, and configure it.
 top_level_dir: visualstudio
