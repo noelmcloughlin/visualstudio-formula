@@ -1,0 +1,6 @@
+# -*- coding: utf-8 -*-
+# vim: ft=yaml
+---
+visualstudio:
+  pkg:
+    uri_b: https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools

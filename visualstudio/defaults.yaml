@@ -1,0 +1,29 @@
+# -*- coding: utf-8 -*-
+# vim: ft=yaml
+---
+{%- if grains.os == 'Windows' %}
+    {%- set rootuser = salt['cmd.run']("id -un") %}
+{%- endif %}
+
+visualstudio:
+  identity:
+    rootuser: {{ rootuser | d('') }}
+  environ_file: null
+  environ: []
+  config:
+    path: null
+  dir:
+    tmp: C:\temp\visualstudio
+  pkg:
+    name: visualstudio-win32-x64
+    uri_b: https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools
+    skip_verify: true
+  retry_option:
+    # https://docs.saltstack.com/en/latest/ref/states/requisites.html#retrying-states
+    attempts: 3
+    until: true
+    interval: 10
+    splay: 10
+  div: '\'
+  misc:
+    force: false
